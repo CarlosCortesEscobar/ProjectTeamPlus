@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="~/SteamProject.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
+    @* <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">SteamProject</a>
@@ -42,21 +42,68 @@
                 </div>
             </div>
         </nav>
-    </header>
+    </header> *@
+    <nav class="vert-nav">
+        <div class="nav-header">
+            <a asp-area="" asp-controller="Home" asp-action="Index">
+            <img class="short-logo-img" src="../assets/shortLogo.png" alt="">
+            <img class="long-logo-img" src="../assets/longLogo.png" alt="">
+            </a>
+        </div>
+        <div class="nav-body">
+            <div class="nav-litem">
+                <a asp-area="Identity" asp-page="/Account/Manage/Index">
+                    <img class="litem-img" src="../assets/person.png" alt="">
+                    <div class="litem-label">Profile</div>
+                </a>
+            </div>
+            <div class="nav-litem">
+                <a asp-area="" asp-controller="Home" asp-action="Index">
+                    <img class="litem-img" src="../assets/dashgrid.png" alt="">
+                    <div class="litem-label">Dashboard</div>
+                </a>
+            </div>
+            <div class="nav-litem">
+                <a asp-area="" asp-controller="Library" asp-action="Index">
+                    <img class="litem-img" src="../assets/books.png" alt="">
+                    <div class="litem-label">Library</div>
+                </a>
+            </div>
+            <div class="nav-litem">
+                <a asp-area="" asp-controller="Home" asp-action="Index">
+                    <img class="litem-img" src="../assets/flags.png" alt="">
+                    <div class="litem-label">Compete</div>
+                </a>
+            </div>
+            <div class="nav-litem">
+            <a asp-area="" asp-controller="Home" asp-action="Index">
+                <img class="litem-img" src="../assets/people.png" alt="">
+                <div class="litem-label">Teams</div>
+            </a>
+            </div>
+                <div class="nav-litem">
+                <a asp-area="" asp-controller="Home" asp-action="Privacy">
+                    <img class="litem-img" src="../assets/eye.png" alt="">
+                    <div class="litem-label">Privacy</div>
+                </a>
+                </div>
+        </div>
+    </nav>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
+    @* <footer class="border-top footer text-muted">
         <div class="container" style="color: black">
             &copy; 2023 - SteamProject - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
         </div>
-    </footer>
+    </footer> *@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
+    <link rel="stylesheet" href="../css/test.css">
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
